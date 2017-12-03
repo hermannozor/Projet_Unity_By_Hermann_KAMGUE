@@ -31,18 +31,16 @@ MonoBehaviour:
     itemID: 1
     itemDesc: Permet de trancher vos ennemis
     itemIcon: {fileID: 21300000, guid: 5ef2abfce38c30f4192acdefad5a8d5d, type: 3}
-    itemModel: {fileID: 1025873991710030, guid: 90a6a1b32d1b87d45971cceec6970189,
+    itemModel: {fileID: 1407162426510942, guid: c39f20e471986114cbd98dace05a2589,
       type: 2}
     itemValue: 10
     itemType: 1
-    itemWeight: 0
+    itemWeight: 5
     maxStack: 1
     indexItemInList: 999
     rarity: 10
     itemAttributes:
     - attributeName: Damage
-      attributeValue: 10
-    - attributeName: Armor
       attributeValue: 10
   - itemName: Casque en fer
     itemID: 2
@@ -57,7 +55,5 @@ MonoBehaviour:
     indexItemInList: 999
     rarity: 10
     itemAttributes:
-    - attributeName: Armor
-      attributeValue: 10
     - attributeName: Armor
       attributeValue: 10

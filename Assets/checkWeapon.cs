@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class checkWeapon : MonoBehaviour {
 
-   
-    private int id_Arme;
+	public GameObject main_joueur;
+
+    public int id_Arme;
 
   
     public List<GameObject> list_Arme = new List<GameObject>();
 
     [SerializeField]
 
-	void Start () {
+/*	void Start () {
 
        
 
-    }
+    }*/
 	
 	
 	void Update () {
@@ -30,11 +31,18 @@ public class checkWeapon : MonoBehaviour {
             id_Arme = 0;
 
             for (int i = 0; i < list_Arme.Count; i++)
-            {
-
+            { 
                 list_Arme[i].SetActive(false);
             }
         }
+
+		if (main_joueur.transform.childCount > 1) 
+		{
+			for (int i = 0; i < list_Arme.Count; i++) 
+			{
+				list_Arme [i].SetActive (false);
+			} 
+		}
 
         if (id_Arme == 1 && transform.childCount > 0)
         {

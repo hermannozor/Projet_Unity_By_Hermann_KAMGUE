@@ -245,14 +245,14 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
-    public void ApplyDamage(float theDamage)
+    public void ApplyDamage(float TheDamage)
     {
-        currentHealth = currentHealth - (theDamage - (currentArmor * theDamage) / 100);
-
-        if(currentHealth <= 0)
-        {
-            Dead();
-        }
+		if (!characterMotor.isDead) {
+			currentHealth = currentHealth - (TheDamage - (currentArmor * TheDamage) / 100);
+			if (currentHealth <= 0) {
+				Dead ();
+			}
+		}
     }
 
     public void Dead()
@@ -283,11 +283,6 @@ public class PlayerInventory : MonoBehaviour
                     toolTip.deactivateTooltip();
                 characterSystemInventory.closeInventory();
             }
-        }
-
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            ApplyDamage(10);
         }
 
         if (Input.GetKeyDown(inputManagerDatabase.InventoryKeyCode))
